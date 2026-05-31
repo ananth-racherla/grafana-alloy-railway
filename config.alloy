@@ -1,5 +1,8 @@
+logging {
+  level  = "warn"
+  format = "logfmt"
+}
 prometheus.scrape "api" {
-  targets = [{"__address__" = env("TARGET_URL")}]
   targets = [{
     "__address__" = env("TARGET_URL"),
     "env"         = env("APP_ENV"),
